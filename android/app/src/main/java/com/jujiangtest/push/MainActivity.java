@@ -1,4 +1,4 @@
-package com.push;
+package com.jujiangtest.push;
 
 import com.facebook.react.ReactActivity;
 

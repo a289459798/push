@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>MiSDKRun</key>
+	<string>online</string>
+	<key>MiSDKAppKey</key>
+	<string>5142014531257</string>
+	<key>MiSDKAppID</key>
+	<string>2882303761520145257</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

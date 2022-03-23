@@ -12,6 +12,14 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2D5B65DA27EB30C2003F6650 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5B65D927EB30C2003F6650 /* UserNotifications.framework */; };
+		2D5B65DC27EB30C9003F6650 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5B65DB27EB30C9003F6650 /* libresolv.tbd */; };
+		2D5B65DE27EB30D0003F6650 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5B65DD27EB30D0003F6650 /* libxml2.tbd */; };
+		2D5B65E027EB30D8003F6650 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5B65DF27EB30D8003F6650 /* libz.tbd */; };
+		2D5B65E227EB30DF003F6650 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5B65E127EB30DF003F6650 /* SystemConfiguration.framework */; };
+		2D5B65E427EB30EA003F6650 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5B65E327EB30EA003F6650 /* MobileCoreServices.framework */; };
+		2D5B65E627EB30F1003F6650 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5B65E527EB30F1003F6650 /* CFNetwork.framework */; };
+		2D5B65E827EB30F8003F6650 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5B65E727EB30F8003F6650 /* CoreTelephony.framework */; };
 		7C0FF147A686DCB7AF69DC14 /* libPods-push.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B346312129405D3D6FBE91 /* libPods-push.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -37,6 +45,15 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = push/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = push/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = push/main.m; sourceTree = "<group>"; };
+		2D5B65D927EB30C2003F6650 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		2D5B65DB27EB30C9003F6650 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		2D5B65DD27EB30D0003F6650 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		2D5B65DF27EB30D8003F6650 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		2D5B65E127EB30DF003F6650 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2D5B65E327EB30EA003F6650 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2D5B65E527EB30F1003F6650 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2D5B65E727EB30F8003F6650 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		2D5B65E927EB3121003F6650 /* push.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = push.entitlements; path = push/push.entitlements; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = push/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD008F84B32EAAAF8843259E /* Pods-push.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-push.release.xcconfig"; path = "Target Support Files/Pods-push/Pods-push.release.xcconfig"; sourceTree = "<group>"; };
 		B6B346312129405D3D6FBE91 /* libPods-push.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-push.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +76,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D5B65E827EB30F8003F6650 /* CoreTelephony.framework in Frameworks */,
+				2D5B65E627EB30F1003F6650 /* CFNetwork.framework in Frameworks */,
+				2D5B65E427EB30EA003F6650 /* MobileCoreServices.framework in Frameworks */,
+				2D5B65E227EB30DF003F6650 /* SystemConfiguration.framework in Frameworks */,
+				2D5B65E027EB30D8003F6650 /* libz.tbd in Frameworks */,
+				2D5B65DE27EB30D0003F6650 /* libxml2.tbd in Frameworks */,
+				2D5B65DC27EB30C9003F6650 /* libresolv.tbd in Frameworks */,
+				2D5B65DA27EB30C2003F6650 /* UserNotifications.framework in Frameworks */,
 				7C0FF147A686DCB7AF69DC14 /* libPods-push.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +111,7 @@
 		13B07FAE1A68108700A75B9A /* push */ = {
 			isa = PBXGroup;
 			children = (
+				2D5B65E927EB3121003F6650 /* push.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -99,6 +125,14 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D5B65E727EB30F8003F6650 /* CoreTelephony.framework */,
+				2D5B65E527EB30F1003F6650 /* CFNetwork.framework */,
+				2D5B65E327EB30EA003F6650 /* MobileCoreServices.framework */,
+				2D5B65E127EB30DF003F6650 /* SystemConfiguration.framework */,
+				2D5B65DF27EB30D8003F6650 /* libz.tbd */,
+				2D5B65DD27EB30D0003F6650 /* libxml2.tbd */,
+				2D5B65DB27EB30C9003F6650 /* libresolv.tbd */,
+				2D5B65D927EB30C2003F6650 /* UserNotifications.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				B6B346312129405D3D6FBE91 /* libPods-push.a */,
 				ED8AC6AC371F6C4FB4B061EB /* libPods-push-pushTests.a */,
@@ -145,7 +179,6 @@
 				E63644FBED009CAD19A84CB8 /* Pods-push-pushTests.debug.xcconfig */,
 				EF470915A8126C73FA489D63 /* Pods-push-pushTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -484,7 +517,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = push/push.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6ELR45J7M4;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = push/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,7 +531,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichong.push;
 				PRODUCT_NAME = push;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -510,7 +545,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = push/push.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6ELR45J7M4;
 				INFOPLIST_FILE = push/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -521,7 +558,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ichong.push;
 				PRODUCT_NAME = push;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

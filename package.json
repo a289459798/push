@@ -10,8 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/push-notification-ios": "^1.10.1",
     "react": "17.0.2",
     "react-native": "0.67.3",
+    "react-native-device-info": "^8.5.1",
     "react-native-push": "github:a289459798/react-native-push"
   },
   "devDependencies": {

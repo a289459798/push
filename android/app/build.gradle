@@ -131,7 +131,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.push"
+        applicationId "com.jujiangtest.push"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -147,10 +147,10 @@ android {
     }
     signingConfigs {
         debug {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
+            storeFile file('key.keystore')
+            storePassword 'jujiang'
+            keyAlias 'push'
+            keyPassword 'jujiang'
         }
     }
     buildTypes {
@@ -188,6 +188,12 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs '../app/libs'
+    }
+}
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
@@ -214,6 +220,22 @@ dependencies {
         releaseImplementation files(hermesPath + "hermes-release.aar")
     } else {
         implementation jscFlavor
+    }
+}
+
+buildscript {
+    repositories {
+        google()
+        // 配置HMS Core SDK的Maven仓地址。
+        maven {url 'https://developer.huawei.com/repo/'}
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        // 配置HMS Core SDK的Maven仓地址。
+        maven {url 'https://developer.huawei.com/repo/'}
     }
 }
 

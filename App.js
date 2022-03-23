@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {PureComponent} from 'react';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -25,6 +25,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import JJPush from 'react-native-push';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -52,42 +54,73 @@ const Section = ({children, title}): Node => {
   );
 };
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+class App extends PureComponent {
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  constructor(props) {
+    super(props);
+  }
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+  componentDidMount(): * {
+      JJPush.init();
+      setTimeout(() => {
+          JJPush.setAlias("qqqwwweee")
+          JJPush.notify("1111111", "22222222")
+      }, 5000)
+
+
+      JJPush.addEventListener('jjpush_notify', (res) => {
+          console.log("jjpush", res)
+      });
+
+      JJPush.addEventListener('jjpush_click', (res) => {
+          console.log("jjpush", res)
+      });
+
+      JJPush.getInitialNotification((res) => {
+        alert(JSON.stringify(res))
+      });
+
+  }
+
+    render() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const isDarkMode = false;
+
+    const backgroundStyle = {
+      backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    };
+    return (
+      <SafeAreaView style={backgroundStyle}>
+          <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+          <ScrollView
+              contentInsetAdjustmentBehavior="automatic"
+              style={backgroundStyle}>
+            <Header />
+            <View
+                style={{
+                  backgroundColor: isDarkMode ? Colors.black : Colors.white,
+                }}>
+              <Section title="Step One">
+                Edit <Text style={styles.highlight}>App.js</Text> to change this
+                screen and then come back to see your edits.
+              </Section>
+              <Section title="See Your Changes">
+                <ReloadInstructions />
+              </Section>
+              <Section title="Debug">
+                <DebugInstructions />
+              </Section>
+              <Section title="Learn More">
+                Read the docs to discover what to do next:
+              </Section>
+              <LearnMoreLinks />
+            </View>
+          </ScrollView>
+        </SafeAreaView>
+    );
+  }
+
+
 };
 
 const styles = StyleSheet.create({

@@ -3,6 +3,8 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import "RNJJPush.h"
+#import <React/RCTLinkingManager.h>
 
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
@@ -30,12 +32,13 @@ static void InitializeFlipper(UIApplication *application) {
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
 #endif
+  
 
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"push"
                                             initialProperties:nil];
-
+  [RNJJPush application:application didFinishLaunchingWithOptions:launchOptions];
   if (@available(iOS 13.0, *)) {
       rootView.backgroundColor = [UIColor systemBackgroundColor];
   } else {
@@ -57,6 +60,65 @@ static void InitializeFlipper(UIApplication *application) {
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
+}
+
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+
+  [RNJJPush application:application didRegisterUserNotificationSettings:notificationSettings];
+
+}
+
+
+- (void)application:(UIApplication *)app
+        didFailToRegisterForRemoteNotificationsWithError:(NSError *)err
+{
+  NSLog(@"推送注册失败：%@", err);
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+  [RNJJPush application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)notification
+{
+  [RNJJPush application:application didReceiveRemoteNotification:notification];
+
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+  [RNJJPush application:application didReceiveLocalNotification:notification];
+
+}
+
+// ios 10
+// 应用在前台收到通知
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+  [RNJJPush userNotificationCenter:center willPresentNotification:notification withCompletionHandler:completionHandler];
+}
+
+// 点击通知进入应用
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+  [RNJJPush userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
+  completionHandler();
+}
+
+//#define __IPHONE_10_0    100000
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
+{
+  //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响。
+  
+    return [RCTLinkingManager application:app openURL:url options:options];
+}
+
+
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void(^)(NSArray<id<UIUserActivityRestoring>> * __nullable restorableObjects))restorationHandler {
+  
+    return [RCTLinkingManager application:application
+    continueUserActivity:userActivity
+                       restorationHandler:restorationHandler];
 }
 
 @end
