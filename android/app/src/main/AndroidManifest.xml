@@ -31,16 +31,22 @@
                 android:value="105796035"/>
         <meta-data
                 android:name="com.vivo.push.api_key"
-                android:value="xxxxxxxx"/>
+                android:value="9a550c8362bad05200d9e132b51520ee"/>
 
         <meta-data
                 android:name="com.vivo.push.app_id"
-                android:value="xxxx"/>
+                android:value="105549256"/>
         <meta-data
                 android:name="com.xm.push.appid"
                 android:value="\2882303761520145163"/>
         <meta-data
                 android:name="com.xm.push.appkey"
                 android:value="\5762014522163"/>
+        <meta-data
+                android:name="com.oppo.push.app_key"
+                android:value="56bdcf4739314192a921cd60a16e38e1"/>
+        <meta-data
+                android:name="com.oppo.push.app_secret"
+                android:value="dde5c17015cd42a599a24bdf71c50314"/>
     </application>
 </manifest>
