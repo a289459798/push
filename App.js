@@ -61,7 +61,7 @@ class App extends PureComponent {
   }
 
   componentDidMount(): * {
-      JJPush.init();
+      JJPush.init("625ce1a47e9c7", "625ce1a47e9d3");
       setTimeout(() => {
           JJPush.setAlias("qqqwwweee")
           JJPush.notify("1111111", "22222222")
